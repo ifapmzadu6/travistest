@@ -2,6 +2,8 @@ lunguage: objective-c
   
 
 before_install:
+  - gem update
+  - gem upgrade
   - gem install cocoapods -r
   - pod setup
   - pod install
