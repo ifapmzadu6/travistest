@@ -7,8 +7,8 @@ before_install:
   - pod install
 
 script:
-  - xctool -workspace YOURPROJECT.xcworkspace -scheme YOURSCHEME -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  - xcodebuild -workspace YOURPROJECT.xcworkspace -scheme YOURSCHEME -destination 'platform=iOS Simulator,name=iPhone 6' test
+  - xctool -workspace TravisTest.xcworkspace -scheme YOURSCHEME -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -workspace TravisTest.xcworkspace -scheme YOURSCHEME -destination 'platform=iOS Simulator,name=iPhone 6' test
 
 
 
