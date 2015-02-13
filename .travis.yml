@@ -1,9 +1,9 @@
 lunguage: objective-c
   
+rvm:
+  - 2.2.0
 
 before_install:
-  - rvm use default
-  - gem update
   - gem install cocoapods -r
   - pod setup
   - pod install
