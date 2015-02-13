@@ -2,15 +2,15 @@ lunguage: objective-c
   
 
 before_install:
+  - rvm use default
   - gem update
-  - gem upgrade
   - gem install cocoapods -r
   - pod setup
   - pod install
 
 script:
-  - xctool -workspace TravisTest.xcworkspace -scheme YOURSCHEME -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
-  - xcodebuild -workspace TravisTest.xcworkspace -scheme YOURSCHEME -destination 'platform=iOS Simulator,name=iPhone 6' test
+  - xctool -workspace TravisTest.xcworkspace -scheme TravisTest -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+  - xcodebuild -workspace TravisTest.xcworkspace -scheme TravisTest -destination 'platform=iOS Simulator,name=iPhone 6' test
 
 
 
